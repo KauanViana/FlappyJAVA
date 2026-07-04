@@ -8,6 +8,7 @@ public class Ground {
 
     private int x;
 
+
     public Ground() {
 
         this.x = 0;
@@ -28,7 +29,7 @@ public class Ground {
 
     public void draw(Graphics2D g2) {
 
-        g2.setColor(new Color(222, 190, 120));
+        g2.setColor(new Color(149, 128, 81));
 
         g2.fillRect(
                 this.x,

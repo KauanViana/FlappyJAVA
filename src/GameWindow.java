@@ -13,6 +13,7 @@ public class GameWindow extends JFrame {
         setResizable(false);
 
         GamePanel panel = new GamePanel();
+        setIconImage(new ImageIcon("./res/sprites/bird.png").getImage());
 
         add(panel);
 

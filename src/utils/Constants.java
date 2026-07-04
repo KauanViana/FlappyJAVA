@@ -7,7 +7,7 @@ public final class Constants {
     // Janela
     public static final int WINDOW_WIDTH = 480;
     public static final int WINDOW_HEIGHT = 640;
-    public static final String WINDOW_TITLE = "Flappy Bird";
+    public static final String WINDOW_TITLE = "Flappy Fairy";
 
     // Jogo
     public static final int FPS = 60;

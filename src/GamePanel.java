@@ -28,7 +28,7 @@ public class GamePanel extends JPanel {
                 Constants.WINDOW_HEIGHT
         ));
 
-        setBackground(new Color(120,200,255));
+        setBackground(new Color(43, 58, 77));
 
         bird = new Bird();
         pipe = new Pipe(Constants.PIPE_SPAWN_X);
@@ -52,7 +52,7 @@ public class GamePanel extends JPanel {
                     // Atualiza o jogo normalmente.
                     bird.update();
                     pipeManager.update();
-                    ground.update();
+                    //ground.update();
                     scoreManager.update(bird, pipeManager);
                     break;
                 case GameState.GAME_OVER:
@@ -77,24 +77,6 @@ public class GamePanel extends JPanel {
     }
 
 
-/*
-    @Override
-    protected void paintComponent(Graphics g) {
-
-        super.paintComponent(g);
-
-        Graphics2D g2 = (Graphics2D) g;
-
-        pipeManager.draw(g2);
-
-        bird.draw(g2);
-
-        ground.draw(g2);
-
-        scoreManager.draw(g2);
-
-    }*/
-
     @Override
     protected void paintComponent(Graphics g) {
 
@@ -108,10 +90,10 @@ public class GamePanel extends JPanel {
 
                 g2.setColor(Color.WHITE);
                 g2.setFont(new Font("Arial", Font.BOLD, 40));
-                g2.drawString("FLAPPY BIRD", 120, 200);
+                g2.drawString("FLAPPY FAIRY", 20, 250);
 
                 g2.setFont(new Font("Arial", Font.PLAIN, 20));
-                g2.drawString("Pressione ESPAÇO para jogar", 100, 260);
+                g2.drawString("Pressione ESPAÇO para jogar", 20, 310);
 
                 break;
 
@@ -119,7 +101,7 @@ public class GamePanel extends JPanel {
 
                 pipeManager.draw(g2);
                 bird.draw(g2);
-                ground.draw(g2);
+                //ground.draw(g2);
                 scoreManager.draw(g2);
 
                 break;
@@ -128,7 +110,7 @@ public class GamePanel extends JPanel {
 
                 pipeManager.draw(g2);
                 bird.draw(g2);
-                ground.draw(g2);
+                //ground.draw(g2);
                 scoreManager.draw(g2);
 
                 g2.setColor(new Color(0, 0, 0, 150));
@@ -136,10 +118,10 @@ public class GamePanel extends JPanel {
 
                 g2.setColor(Color.WHITE);
                 g2.setFont(new Font("Arial", Font.BOLD, 40));
-                g2.drawString("GAME OVER", 110, 250);
+                g2.drawString("GAME OVER", 20, 250);
 
                 g2.setFont(new Font("Arial", Font.PLAIN, 20));
-                g2.drawString("Pressione ESPAÇO para reiniciar", 100, 310);
+                g2.drawString("Pressione ESPAÇO para reiniciar", 20, 310);
 
                 break;
         }

@@ -2,6 +2,7 @@ package managers;
 
 import entities.Bird;
 import enums.GameState;
+import utils.SfxPlayer;
 
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
@@ -32,6 +33,7 @@ public class InputManager extends KeyAdapter {
 
                 case GameState.MENU:
                     GameStateManager.setState(GameState.PLAYING);
+                    new SfxPlayer("click.wav", -15.0f);
                     break;
 
                 case GameState.PLAYING:

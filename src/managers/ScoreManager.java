@@ -2,6 +2,7 @@ package managers;
 
 import entities.Bird;
 import entities.Pipe;
+import utils.SfxPlayer;
 
 import java.awt.*;
 
@@ -19,6 +20,8 @@ public class ScoreManager {
                 score++;
 
                 pipe.setScored(true);
+
+                //new SfxPlayer("scored.wav");
 
             }
 
